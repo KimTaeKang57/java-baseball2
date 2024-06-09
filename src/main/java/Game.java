@@ -33,9 +33,14 @@ public class Game {
     }
 
     private void decideGameWinner(int rounds) {
+        int maxPosition = 0;
+        for (Car car : cars) {
+            maxPosition = Math.max(maxPosition, car.getPosition());
+        }
+
         List<String> winnerNames = new ArrayList<>();
         for (Car car : cars) {
-            if (car.getPosition() == rounds) {
+            if (car.getPosition() == maxPosition) {
                 winnerNames.add(car.getName());
             }
         }
