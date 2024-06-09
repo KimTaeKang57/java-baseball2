@@ -10,4 +10,13 @@ public class Game {
     public List<Car> getCars() {
         return cars;
     }
+
+    private void printCarPosition(Car car) {
+        System.out.println(car.getName() + " : ");
+        int carPosition = car.getPosition();
+        for (int i = 0; i < carPosition; i++) {
+            System.out.println("-");
+        }
+        System.out.println();
+    }
 }
