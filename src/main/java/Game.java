@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
@@ -28,5 +29,16 @@ public class Game {
             }
             System.out.println();
         }
+        decideGameWinner(rounds);
+    }
+
+    private void decideGameWinner(int rounds) {
+        List<String> winnerNames = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.getPosition() == rounds) {
+                winnerNames.add(car.getName());
+            }
+        }
+        System.out.println("최종 우승자 : " + String.join(", ", winnerNames));
     }
 }
