@@ -12,11 +12,21 @@ public class Game {
     }
 
     private void printCarPosition(Car car) {
-        System.out.println(car.getName() + " : ");
+        System.out.print(car.getName() + " : ");
         int carPosition = car.getPosition();
         for (int i = 0; i < carPosition; i++) {
-            System.out.println("-");
+            System.out.print("-");
         }
         System.out.println();
+    }
+
+    public void startGame(int rounds){
+        for (int i = 0; i < rounds; i++) {
+            for (Car car : cars) {
+                car.moveOrStop();
+                printCarPosition(car);
+            }
+            System.out.println();
+        }
     }
 }
