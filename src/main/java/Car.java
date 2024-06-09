@@ -16,4 +16,10 @@ public class Car {
     public int getPosition() {
         return position;
     }
+
+    public void moveOrStop(){
+        Random random = new Random();
+        int randomNumber = random.nextInt(10);
+        if(randomNumber >= 4) position++;
+    }
 }
