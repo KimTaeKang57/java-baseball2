@@ -29,10 +29,10 @@ public class Game {
             }
             System.out.println();
         }
-        decideGameWinner(rounds);
+        decideGameWinner();
     }
 
-    private void decideGameWinner(int rounds) {
+    private void decideGameWinner() {
         int maxPosition = 0;
         for (Car car : cars) {
             maxPosition = Math.max(maxPosition, car.getPosition());
